@@ -16,9 +16,9 @@ const LogIn = () => {
   const [passwordVisibility, setPasswordVisibility] = useState(false);
 
   const passwordVisibilityIcon = passwordVisibility ? (
-    <i className="fa-solid fa-eye"></i>
+    <i className="fa-solid fa-eye w-4"></i>
   ) : (
-    <i className="fa-solid fa-eye-slash"></i>
+    <i className="fa-solid fa-eye-slash w-4"></i>
   );
 
   const {
@@ -82,7 +82,7 @@ const LogIn = () => {
               name="password"
             />
             <button
-              className="absolute top-1/2 right-2 -translate-y-1/2 hover:text-red-500 transition-color duration-300 ease-in-out text-xs drop-shadow-md cursor-pointer"
+              className="absolute top-1/2 right-1.5 -translate-y-1/2 hover:text-red-500 transition-colors duration-300 ease-in-out text-xs drop-shadow-md cursor-pointer"
               onClick={() =>
                 setPasswordVisibility((prevVisibility) => !prevVisibility)
               }
@@ -98,12 +98,12 @@ const LogIn = () => {
           ) : null}
         </div>
         <button
-          className="bg-red-400 hover:bg-red-300 transition-color duration-300 ease-in-out text-white text-lg font-bold mt-3 px-4 py-2 rounded-full shadow-md drop-shadow-md cursor-pointer"
+          className="bg-red-400 hover:bg-red-300 disabled:bg-gray-900 disabled:text-gray-600 transition-colors duration-300 ease-in-out text-white text-lg font-bold mt-3 px-4 py-2 rounded-full shadow-md drop-shadow-md cursor-pointer"
           disabled={isSubmitting}
         >
           {isSubmitting ? (
             <div>
-              Loading...{' '}
+              Loading {''}
               {
                 <i className="fa-solid fa-spinner animate-spin drop-shadow-md"></i>
               }
