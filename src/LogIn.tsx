@@ -47,7 +47,7 @@ const LogIn = () => {
 
   return (
     <>
-      <p className="text-red-400 text-xl font-bold mt-5 mb-1 drop-shadow-sm">
+      <p className="text-red-400 text-xl font-bold mt-5 mb-1 drop-shadow-xs">
         Log in
       </p>
       <form
